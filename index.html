@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>JS2</title>
 </head>
 <body>
-$END$
+<form>
+    <p>liczba 1</p>
+    <input type="text" id="l1" name="liczba 1"><br>
+    <p>liczba 2</p>
+    <input type="text" id="l2" name="liczba 2">
+</form>
+<input type="button" value="dodaj" onclick="licz_wynik()">
+<p>Wynik</p>
+<p id="wynik"></p>
+<script>
+    function licz_wynik() {
+        document.getElementById("wynik").innerHTML =
+            (document.getElementById("l1").value -
+                (-document.getElementById("l2").value));
+    }
+</script>
 </body>
 </html>
